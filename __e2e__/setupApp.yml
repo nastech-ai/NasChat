@@ -1,0 +1,32 @@
+appId: com.naschat.app
+---
+- launchApp:
+    appId: "com.naschat.app"
+    clearState: true
+    arguments:
+      "-EXDevMenuIsOnboardingFinished": true
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - openLink: "exp+naschat://expo-development-client/?url=http%3A%2F%2Flocalhost%3A8081"
+      - runFlow:
+          when:
+            visible: 'Open in "NasChat"'
+          commands:
+            - tapOn: Open
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - tapOn: 'http://localhost:8081'
+      - runFlow:
+          label: "Dismiss Expo dev menu"
+          when:
+            visible: "Continue"
+          commands:
+            - back
+- tapOn:
+    id: e2eProxyHeaderInput
+- inputText: ${output.result}
+- pressKey: Enter
