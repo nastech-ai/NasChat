@@ -82,7 +82,7 @@ export const NASCHAT_PROXY_DID: Did =
  * The DID of the chat service to proxy to
  */
 export const CHAT_PROXY_DID: Did =
-  process.env.EXPO_PUBLIC_CHAT_PROXY_DID || 'did:web:api.bsky.chat'
+  process.env.EXPO_PUBLIC_CHAT_PROXY_DID || 'did:web:api.naschat.chat'
 
 /**
  * Metrics API host
