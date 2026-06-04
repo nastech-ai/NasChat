@@ -104,9 +104,9 @@ export const POST_IMG_MAX = {
 }
 
 export const STAGING_LINK_META_PROXY =
-  'https://cardyb.staging.naschatai.com/v1/extract?url='
+  'https://cardyb.staging.bsky.app/v1/extract?url='
 
-export const PROD_LINK_META_PROXY = 'https://cardyb.naschatai.com/v1/extract?url='
+export const PROD_LINK_META_PROXY = 'https://cardyb.bsky.app/v1/extract?url='
 
 export function LINK_META_PROXY(_serviceUrl: string) {
   if (IS_DEV) {
