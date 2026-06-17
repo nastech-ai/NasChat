@@ -103,3 +103,7 @@ require (
 	gorm.io/gorm v1.25.9 // indirect
 	lukechampine.com/blake3 v1.2.1 // indirect
 )
+
+replace (
+	github.com/naschat/indigo => github.com/bluesky-social/indigo v0.0.0-20260529183052-5368f55344e0
+)
