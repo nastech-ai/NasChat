@@ -63,7 +63,7 @@ jobs:
           version: 1.16.2
 
       - name: 💾 Cache Pods
-        uses: actions/cache@v5
+        uses: actions/cache@v5.0.5
         id: pods-cache
         with:
           path: ./ios/Pods
@@ -165,7 +165,7 @@ jobs:
 
       - name: ⬇️ Restore Cache
         id: get-base-commit
-        uses: actions/cache@v5
+        uses: actions/cache@v5.0.5
         if: ${{ inputs.profile == 'testflight' }}
         with:
           path: most-recent-testflight-commit.txt

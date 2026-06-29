@@ -137,7 +137,7 @@ jobs:
 
       - name: ⬇️ Restore Cache
         id: get-base-commit
-        uses: actions/cache@v5
+        uses: actions/cache@v5.0.5
         if: ${{ !steps.fingerprint.outputs.includes-changes }}
         with:
           path: most-recent-testflight-commit.txt
@@ -199,7 +199,7 @@ jobs:
           version: 1.16.2
 
       - name: 💾 Cache Pods
-        uses: actions/cache@v5
+        uses: actions/cache@v5.0.5
         id: pods-cache
         with:
           path: ./ios/Pods
@@ -282,7 +282,7 @@ jobs:
 
       - name: ⬇️ Restore Cache
         id: get-base-commit
-        uses: actions/cache@v5
+        uses: actions/cache@v5.0.5
         if: ${{ inputs.channel == 'testflight' }}
         with:
           path: most-recent-testflight-commit.txt
@@ -333,7 +333,7 @@ jobs:
           packager: 'pnpm --allow-build=dtrace-provider'
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - uses: actions/setup-java@v5
+      - uses: actions/setup-java@v5.3.0
         with:
           distribution: "temurin"
           java-version: "17"
@@ -396,7 +396,7 @@ jobs:
 
       - name: ⬇️ Restore Cache
         id: get-base-commit
-        uses: actions/cache@v5
+        uses: actions/cache@v5.0.5
         if: ${{ inputs.channel != 'testflight' && inputs.channel != 'production' }}
         with:
           path: most-recent-testflight-commit.txt
