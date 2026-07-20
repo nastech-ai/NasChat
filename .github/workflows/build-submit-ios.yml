@@ -155,7 +155,7 @@ jobs:
 
       - name: 🔔 Notify Slack of Production Build
         if: ${{ inputs.profile == 'production' }}
-        uses: slackapi/slack-github-action@v3.0.3
+        uses: slackapi/slack-github-action@v3.0.5
         with:
           webhook: ${{ secrets.SLACK_CLIENT_ALERT_WEBHOOK }}
           webhook-type: incoming-webhook

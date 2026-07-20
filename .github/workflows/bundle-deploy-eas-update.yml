@@ -333,7 +333,7 @@ jobs:
           packager: 'pnpm --allow-build=dtrace-provider'
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - uses: actions/setup-java@v5
+      - uses: actions/setup-java@v5.5.0
         with:
           distribution: "temurin"
           java-version: "17"
@@ -386,7 +386,7 @@ jobs:
           path: build.apk
 
       - name: 🔔 Notify Slack
-        uses: slackapi/slack-github-action@v3.0.3
+        uses: slackapi/slack-github-action@v3.0.5
         with:
           webhook: ${{ secrets.SLACK_CLIENT_ALERT_WEBHOOK }}
           webhook-type: incoming-webhook
